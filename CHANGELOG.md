@@ -1,6 +1,17 @@
 # Changelog
 
-All notable changes to Orchard will be documented in this file.
+All notable changes to 星奕筑容器 will be documented in this file.
+
+## [1.12.1-zh.2] - 2026-06-14
+
+### Added
+- Added Xingyizhu Container branding.
+- Replaced the macOS app icon with the provided Xingyizhu logo.
+
+### Changed
+- Changed the user-facing app name to 星奕筑容器.
+- Updated install scripts, README, and release notes for the new brand.
+- Updated the in-app release link to this GitHub repository.
 
 ## [1.12.1-zh.1] - 2026-06-14
 

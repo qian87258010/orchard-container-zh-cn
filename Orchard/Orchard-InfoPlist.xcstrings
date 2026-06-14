@@ -8,13 +8,13 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": "Orchard"
+            "value": "Xingyizhu Container"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Orchard 中文版"
+            "value": "星奕筑容器"
           }
         }
       }
@@ -26,13 +26,13 @@
         "en": {
           "stringUnit": {
             "state": "new",
-            "value": ""
+            "value": "Xingyizhu Container needs permission to automate terminal apps to open container shells."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Orchard 需要自动化终端应用以打开容器 Shell。"
+            "value": "星奕筑容器需要自动化终端应用以打开容器 Shell。"
           }
         }
       }

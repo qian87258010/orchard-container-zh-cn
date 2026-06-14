@@ -107,7 +107,7 @@ class ContainerService: ObservableObject {
 
     // App version info
     let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.1.7"
-    let githubRepo = "container-compose/orchard" // Replace with actual repo
+    let githubRepo = "qian87258010/orchard-container-zh-cn"
     private let updateCheckInterval: TimeInterval = 1 * 60 * 60 // 1 hour
 
     var containerBinaryPath: String {
@@ -219,9 +219,15 @@ class ContainerService: ObservableObject {
         }
     }
 
+    private func numericVersionComponents(_ version: String) -> [Int] {
+        let normalizedVersion = version.trimmingCharacters(in: CharacterSet(charactersIn: "vV"))
+        let semanticVersion = normalizedVersion.split(separator: "-").first.map(String.init) ?? normalizedVersion
+        return semanticVersion.components(separatedBy: ".").compactMap { Int($0) }
+    }
+
     private func isNewerVersion(_ version1: String, than version2: String) -> Bool {
-        let v1Components = version1.components(separatedBy: ".").compactMap { Int($0) }
-        let v2Components = version2.components(separatedBy: ".").compactMap { Int($0) }
+        let v1Components = numericVersionComponents(version1)
+        let v2Components = numericVersionComponents(version2)
 
         let maxCount = max(v1Components.count, v2Components.count)
 
@@ -257,9 +263,9 @@ class ContainerService: ObservableObject {
 
         await MainActor.run {
             if self.updateAvailable {
-                self.successMessage = "Update available! Version \(self.latestVersion ?? "") is now available for download."
+                self.successMessage = "发现新版本：\(self.latestVersion ?? "")，可前往 GitHub 下载。"
             } else {
-                self.successMessage = "Orchard is up to date. You're running the latest version (\(self.currentVersion))."
+                self.successMessage = "星奕筑容器已是最新版本。当前版本：\(self.currentVersion)。"
             }
         }
     }
@@ -2278,4 +2284,3 @@ class ContainerService: ObservableObject {
             arguments: ["-e", script])
     }
 }
-

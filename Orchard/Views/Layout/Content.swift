@@ -80,7 +80,7 @@ struct ContentView: View {
                     showingItemNavigatorPopover: $showingItemNavigatorPopover,
                     listFocusedTab: _listFocusedTab,
                     isWindowFocused: isWindowFocused,
-                    windowTitle: "Orchard"
+                    windowTitle: "星奕筑容器"
                 )
                 .navigationTitle("")
                 .toolbarBackgroundVisibility(.hidden, for: .windowToolbar)

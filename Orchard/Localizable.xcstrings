@@ -490,7 +490,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "检查 Orchard 最新版本"
+            "value": "检查星奕筑容器最新版本"
           }
         }
       }
@@ -1790,7 +1790,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Orchard 中文版"
+            "value": "星奕筑容器"
           }
         }
       }
@@ -1800,7 +1800,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Orchard 帮助"
+            "value": "星奕筑容器帮助"
           }
         }
       }
@@ -1810,7 +1810,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "Orchard 已是最新版本（v%@）"
+            "value": "星奕筑容器已是最新版本（v%@）"
           }
         }
       }
@@ -1890,7 +1890,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "请检查是否有可用的 Orchard 更新。"
+            "value": "请检查是否有可用的星奕筑容器更新。"
           }
         }
       }
@@ -1990,7 +1990,7 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "退出 Orchard"
+            "value": "退出星奕筑容器"
           }
         }
       }

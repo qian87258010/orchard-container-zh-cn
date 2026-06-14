@@ -115,7 +115,7 @@ struct ConfigurationDetailView: View {
                                 .buttonStyle(.bordered)
                                 .controlSize(.small)
 
-                                Text("Orchard is up to date (v\(containerService.currentVersion))")
+                                Text("星奕筑容器已是最新版本（v\(containerService.currentVersion)）")
                                     .foregroundColor(.secondary)
                                     .padding(.leading, 10)
                             }

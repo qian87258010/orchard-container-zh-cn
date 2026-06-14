@@ -10,31 +10,31 @@ struct NewerVersionView: View {
                 .foregroundColor(.orange)
 
             VStack(spacing: 16) {
-                Text("Container's Version is not yet supported")
+                Text("Container 版本暂未支持")
                     .font(.title)
                     .fontWeight(.semibold)
 
                 if let installedVersion = containerService.parsedContainerVersion {
-                    Text("We require Apple Container version \(containerService.parsedContainerVersion ?? "unknown"), but you are running version \(installedVersion)")
+                    Text("星奕筑容器需要 Apple Container 版本 \(containerService.parsedContainerVersion ?? "未知")，当前运行版本为 \(installedVersion)。")
                         .padding(.horizontal)
                         .multilineTextAlignment(.center)
                 } else if let rawVersion = containerService.containerVersion {
-                    Text("Detected version: \(rawVersion)")
+                    Text("检测到版本：\(rawVersion)")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .padding(.horizontal)
                         .multilineTextAlignment(.center)
 
-                    Text("We require Apple Container version \(containerService.parsedContainerVersion ?? "unknown")")
+                    Text("星奕筑容器需要 Apple Container 版本 \(containerService.parsedContainerVersion ?? "未知")。")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 } else {
-                    Text("We require Apple Container version \(containerService.parsedContainerVersion ?? "unknown")")
+                    Text("星奕筑容器需要 Apple Container 版本 \(containerService.parsedContainerVersion ?? "未知")。")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
 
-                Text("Please check whether an Orchard update is available.")
+                Text("请检查是否有可用的星奕筑容器更新。")
                     .font(.body)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.center)
@@ -42,14 +42,14 @@ struct NewerVersionView: View {
             }
 
             HStack(spacing: 16) {
-                Button("Check latest Orchard releases") {
-                    if let url = URL(string: "https://github.com/andrew-waters/orchard/releases") {
+                Button("检查星奕筑容器最新版本") {
+                    if let url = URL(string: "https://github.com/qian87258010/orchard-container-zh-cn/releases") {
                         NSWorkspace.shared.open(url)
                     }
                 }
                 .buttonStyle(.borderedProminent)
                 
-                Button("Proceed Anyway") {
+                Button("仍然继续") {
                     Task { @MainActor in
                         await containerService.checkSystemStatusIgnoreVersion()
                     }

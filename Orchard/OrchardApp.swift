@@ -2,6 +2,7 @@ import SwiftUI
 
 @main
 struct OrchardApp: App {
+    private let appName = "星奕筑容器"
     @StateObject private var containerService = ContainerService()
     @StateObject private var menuBarManager = MenuBarManager()
 
@@ -22,7 +23,7 @@ struct OrchardApp: App {
 
                 Divider()
 
-                Button("Orchard Help") {
+                Button("星奕筑容器帮助") {
                     if let url = URL(string: "https://github.com/\(containerService.githubRepo)") {
                         NSWorkspace.shared.open(url)
                     }
@@ -39,7 +40,7 @@ struct OrchardApp: App {
         .defaultSize(width: 900, height: 600)
         .windowToolbarStyle(.unified(showsTitle: false))
 
-        MenuBarExtra("Orchard", systemImage: "cube.box") {
+        MenuBarExtra(appName, image: "AppIcon") {
             MenuBarView()
                 .environmentObject(containerService)
         }
@@ -170,7 +171,7 @@ struct MenuBarView: View {
                 NSApplication.shared.activate(ignoringOtherApps: true)
             }
 
-            Button("Quit Orchard") {
+            Button("退出星奕筑容器") {
                 NSApplication.shared.terminate(nil)
             }
         }

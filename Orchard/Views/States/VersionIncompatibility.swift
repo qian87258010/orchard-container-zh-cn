@@ -10,31 +10,31 @@ struct VersionIncompatibilityView: View {
                 .foregroundColor(.orange)
 
             VStack(spacing: 16) {
-                Text("Unsupported Container Version")
+                Text("Container 版本不兼容")
                     .font(.title)
                     .fontWeight(.semibold)
 
                 if let installedVersion = containerService.parsedContainerVersion {
-                    Text("We require Apple Container version \(containerService.parsedContainerVersion ?? "unknown"), but you are running version \(installedVersion)")
+                    Text("星奕筑容器需要 Apple Container 版本 \(containerService.parsedContainerVersion ?? "未知")，当前运行版本为 \(installedVersion)。")
                         .padding(.horizontal)
                         .multilineTextAlignment(.center)
                 } else if let rawVersion = containerService.containerVersion {
-                    Text("Detected version: \(rawVersion)")
+                    Text("检测到版本：\(rawVersion)")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .padding(.horizontal)
                         .multilineTextAlignment(.center)
 
-                    Text("We require Apple Container version \(containerService.parsedContainerVersion ?? "unknown")")
+                    Text("星奕筑容器需要 Apple Container 版本 \(containerService.parsedContainerVersion ?? "未知")。")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 } else {
-                    Text("We require Apple Container version \(containerService.parsedContainerVersion ?? "unknown")")
+                    Text("星奕筑容器需要 Apple Container 版本 \(containerService.parsedContainerVersion ?? "未知")。")
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
 
-                Text("Please update your Container installation to continue using this application.")
+                Text("请更新 Apple Container 后再继续使用星奕筑容器。")
                     .font(.body)
                     .foregroundColor(.primary)
                     .multilineTextAlignment(.center)
@@ -42,14 +42,14 @@ struct VersionIncompatibilityView: View {
             }
 
             HStack(spacing: 16) {
-                Button("View upgrade instructions") {
+                Button("查看升级说明") {
                     if let url = URL(string: "https://github.com/apple/container?tab=readme-ov-file#install-or-upgrade") {
                         NSWorkspace.shared.open(url)
                     }
                 }
                 .buttonStyle(.borderedProminent)
 
-                Button("Check Again") {
+                Button("重新检查") {
                     Task { @MainActor in
                         await containerService.checkSystemStatus()
                     }
