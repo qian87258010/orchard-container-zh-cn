@@ -16,10 +16,10 @@
 - Homebrew formula：`container`
 - 许可证：Apache License 2.0
 
-本仓库不分发 Apple `container` 的源码或二进制文件，只提供安装和启动说明。
+本仓库不直接分发 Apple `container` 的源码或二进制文件。一键安装器会通过 Homebrew 从官方软件源安装 Apple `container`。
 
 ## Homebrew
 
 - 官网：https://brew.sh/
 
-脚本使用 Homebrew 安装 Apple `container`。请根据 Homebrew 自身许可证和使用规则使用。
+脚本使用 Homebrew 安装 Apple `container`。如果用户电脑没有 Homebrew，一键安装器会调用 Homebrew 官方安装脚本。请根据 Homebrew 自身许可证和使用规则使用。

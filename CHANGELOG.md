@@ -2,6 +2,17 @@
 
 All notable changes to 星奕筑容器 will be documented in this file.
 
+## [1.12.1-zh.4] - 2026-06-14
+
+### Added
+- Added a one-click installer bundle for macOS users.
+- Added a bundled installer command that installs Homebrew when needed, installs Apple container through Homebrew, starts the container service, installs 星奕筑容器.app into /Applications, and opens the app.
+- Added a packaging script for the one-click installer release asset.
+
+### Changed
+- Updated README and release notes to recommend the one-click installer for normal users.
+- Clarified that Apple container is installed automatically through Homebrew and is not directly redistributed in this repository.
+
 ## [1.12.1-zh.3] - 2026-06-14
 
 ### Changed
