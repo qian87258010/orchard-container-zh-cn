@@ -1747,7 +1747,7 @@ class ContainerService: ObservableObject {
                 imageName: cleanImageName,
                 status: .pulling,
                 progress: 0.0,
-                message: "Pulling image..."
+                message: "正在拉取镜像..."
             )
         }
 
@@ -1759,9 +1759,9 @@ class ContainerService: ObservableObject {
                     imageName: cleanImageName,
                     status: .completed,
                     progress: 1.0,
-                    message: "Pull completed successfully"
+                    message: "镜像拉取成功"
                 )
-                self.successMessage = "Successfully pulled image: \(cleanImageName)"
+                self.successMessage = "镜像拉取成功：\(cleanImageName)"
 
                 Task {
                     await loadImages()
@@ -1987,7 +1987,7 @@ class ContainerService: ObservableObject {
             try await ClientImage.delete(reference: imageReference)
 
             await MainActor.run {
-                self.successMessage = "Successfully deleted image: \(imageReference)"
+                self.successMessage = "镜像删除成功：\(imageReference)"
                 self.images.removeAll { $0.reference == imageReference }
 
                 Task {

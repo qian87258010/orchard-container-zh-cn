@@ -2,6 +2,13 @@
 
 All notable changes to 星奕筑容器 will be documented in this file.
 
+## [1.12.1-zh.3] - 2026-06-14
+
+### Changed
+- Localized image and mount detail labels that were still displayed in English.
+- Localized image pull/delete status messages.
+- Rebuilt and retested the GitHub release package for direct download installation.
+
 ## [1.12.1-zh.2] - 2026-06-14
 
 ### Added

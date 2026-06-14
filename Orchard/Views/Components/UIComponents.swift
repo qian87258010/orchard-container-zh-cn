@@ -545,13 +545,53 @@ struct ContainerTerminalButton: View {
 
 // MARK: - Utility Components
 
+func localizedInfoLabel(_ label: String) -> String {
+    [
+        "Address": "地址",
+        "Cmd": "命令",
+        "Container ID": "容器 ID",
+        "Containers": "容器",
+        "CPUs": "CPU",
+        "Created": "创建时间",
+        "Destination": "目标",
+        "Digest": "摘要",
+        "Entrypoint": "入口点",
+        "Executable": "可执行文件",
+        "Exposed Ports": "暴露端口",
+        "Filesystem": "文件系统",
+        "Gateway": "网关",
+        "Hostname": "主机名",
+        "Image": "镜像",
+        "Media Type": "媒体类型",
+        "Mem used": "已用内存",
+        "Memory": "内存",
+        "Name": "名称",
+        "Nameservers": "名称服务器",
+        "Network": "网络",
+        "Options": "选项",
+        "Port": "端口",
+        "Reference": "引用",
+        "Runtime": "运行时",
+        "Size": "大小",
+        "Size (bytes)": "大小（字节）",
+        "Source": "源",
+        "Status": "状态",
+        "Tag": "标签",
+        "Type": "类型",
+        "User": "用户",
+        "Volumes": "卷",
+        "Working Dir": "工作目录",
+        "Working Directory": "工作目录"
+    ][label] ?? label
+}
+
 struct InfoRow: View {
     let label: String
     let value: String
 
     var body: some View {
         HStack {
-            Text(label)
+            Text(localizedInfoLabel(label))
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .frame(width: 100, alignment: .leading)
@@ -577,7 +617,7 @@ struct CopyableInfoRow: View {
 
     var body: some View {
         HStack {
-            Text(label)
+            Text(localizedInfoLabel(label))
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .frame(width: 100, alignment: .leading)
@@ -586,7 +626,7 @@ struct CopyableInfoRow: View {
                 .monospaced()
                 .textSelection(.enabled)
             Spacer()
-            CopyButton(text: copyValue ?? value, label: "Copy to clipboard")
+            CopyButton(text: copyValue ?? value, label: "复制到剪贴板")
         }
     }
 }
@@ -599,7 +639,7 @@ struct NavigableInfoRow: View {
     var body: some View {
         Button(action: onNavigate) {
             HStack {
-                Text(label)
+                Text(localizedInfoLabel(label))
                     .font(.subheadline)
                     .foregroundColor(.secondary)
                     .frame(width: 100, alignment: .leading)
@@ -615,7 +655,7 @@ struct NavigableInfoRow: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .help("View details")
+        .help("查看详情")
     }
 }
 

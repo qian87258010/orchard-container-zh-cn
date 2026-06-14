@@ -24,7 +24,7 @@
 
 ## 快速安装 Release 包
 
-如果你只想使用图形界面，可以在 GitHub Release 下载 `Xingyizhu-Container-1.12.1-zh.2-macos-arm64.zip`。Release 附件只包含星奕筑容器，不包含 Apple `container`，所以仍需先安装 Apple `container`。
+如果你只想使用图形界面，可以在 GitHub Release 下载 `Xingyizhu-Container-1.12.1-zh.3-macos-arm64.zip`。Release 附件只包含星奕筑容器，不包含 Apple `container`，所以仍需先安装 Apple `container`。
 
 先安装并启动 Apple `container`：
 

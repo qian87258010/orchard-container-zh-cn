@@ -895,7 +895,7 @@ struct ContainerImageDetailView: View {
                         HStack {
                             ProgressView()
                                 .scaleEffect(0.7)
-                            Text("Inspecting image...")
+                            Text("正在检查镜像...")
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
                         }
@@ -1055,7 +1055,7 @@ struct ContainerImageDetailView: View {
                 containers: containersUsingImage,
                 selectedTab: $selectedTab,
                 selectedContainer: $selectedContainer,
-                emptyStateMessage: "No containers are currently using this image"
+                emptyStateMessage: "当前没有容器使用此镜像"
             )
         }
     }
@@ -1111,7 +1111,7 @@ struct ClickableInfoRow: View {
 
     var body: some View {
         HStack {
-            Text(label)
+            Text(localizedInfoLabel(label))
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 .frame(width: 100, alignment: .leading)
@@ -1123,7 +1123,7 @@ struct ClickableInfoRow: View {
             .font(.subheadline)
             .monospaced()
             .foregroundColor(.accentColor)
-            .help("Click to open in browser")
+            .help("点击在浏览器中打开")
 
             Spacer()
         }
@@ -1347,7 +1347,7 @@ struct MountDetailView: View {
                 containers: containersUsingMount,
                 selectedTab: $selectedTab,
                 selectedContainer: $selectedContainer,
-                emptyStateMessage: "No containers are currently using this mount"
+                emptyStateMessage: "当前没有容器使用此挂载"
             )
         }
     }
