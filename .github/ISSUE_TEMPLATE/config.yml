@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Orchard 上游项目
+    url: https://github.com/andrew-waters/orchard
+    about: Orchard 原始项目问题请优先反馈给上游。
+  - name: Apple container 上游项目
+    url: https://github.com/apple/container
+    about: Apple container 运行时问题请优先反馈给上游。

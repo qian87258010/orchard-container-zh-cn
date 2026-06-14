@@ -1,0 +1,39 @@
+name: Bug 报告
+description: 报告中文版 Orchard 或安装脚本问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 简要说明发生了什么。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 写出可以复现问题的步骤。
+      placeholder: |
+        1. 运行 ...
+        2. 点击 ...
+        3. 看到 ...
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS 版本
+      placeholder: "例如 macOS 26.5"
+  - type: input
+    id: container
+    attributes:
+      label: container 版本
+      placeholder: "运行 container --version"
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志或截图
+      description: 可以粘贴终端输出，或上传截图。
+      render: shell

@@ -1,0 +1,12 @@
+scratch
+.DS_Store
+Orchard.xcodeproj/project.xcworkspace/xcuserdata/*
+Orchard.xcodeproj/xcuserdata/*
+build/
+DerivedData/
+dist/
+*.xcarchive
+*.dmg
+*.zip
+*.xcloc
+*.xcresult
